@@ -38,6 +38,10 @@ body{
     background-color: white;
     }
 
+span{
+    color: rgb(255, 147, 66)
+}
+
 /* Grilla */
 
 @media only screen and (min-width: 768px){
@@ -61,7 +65,7 @@ body{
     background-color: white;
     align-items: center;
     padding-left: 15%;
-    position:fixed;
+    position:static;
     z-index: 1;
     }
 
@@ -112,20 +116,29 @@ li a:hover{
 
 #incio h1{
     font-weight: 700;
-    margin: 0px 0px 0px 0px;
     }
 
 #inicio h3{
     font-weight: 500;
-    margin: 20px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     }
 
 #inicio p{
-    margin: 20px 200px 20px 0px;
+    margin: 15px 300px 15px 0px;
     font-size: 13px;
     }
 
+#inicio span{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#texto_inicio{
+    margin-left: 200px;
+    }
+
 #redes_sociales{
+    margin-left: 100px;
     align-items: center;
     }
 
@@ -166,6 +179,52 @@ li a:hover{
     text-decoration: none;
     }
 
+#imagen_personal{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    bottom: -81px;
+}
+
+/* Seccion Destacado */
+#destacado{ 
+    position:absolute;
+    top: 105%;
+    left: 25%;
+    height: 150px;
+    width: 50%;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 21px -8px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 21px -8px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 21px -8px rgba(0,0,0,0.45);
+    border-radius: 250px;
+}
+
+#destacado img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+#destacado h3{
+    color: rgb(11, 9, 92);
+    font-size: 19px;
+    font-weight: 600;
+}
+
+#destacado span{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.caja-destacado{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
 /* Seccion Informacion Personal */
 
 #info_personal ul{
@@ -186,10 +245,10 @@ li a:hover{
 
 #fondo-imagen{
     background: rgb(250,251,250);
-    background: linear-gradient(180deg, rgba(250,251,250,1) 0%, rgba(231,231,233,1) 99%); 
-    border: 2px solid orange;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    /* background: linear-gradient(180deg, rgba(250,251,250,1) 0%, rgba(231,231,233,1) 99%);  */
+    border: 1px solid orange;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* Seccion Aptitudes */
@@ -201,7 +260,7 @@ li a:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 90%;
+    height: 80vh;
 }
 
 #aptitudes p{
@@ -213,9 +272,13 @@ li a:hover{
 #cajas{
     width: 1000px;
     height: 400px;
-    padding: 5px;
+    padding: 15px;
     
 }
+#aptitudes h2{
+    padding-top: 0px;
+}
+
 
 .CajaAptitudes{
     flex-direction: column;
@@ -309,6 +372,7 @@ li a:hover{
     transform: scale(1.5);}
 
 #contacto{
+    height: 70vh;
     background: rgb(240,240,240);
     background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 51%, rgba(254,254,254,1) 51%, rgba(240,240,240,1) 100%); 
 }
@@ -317,6 +381,7 @@ li a:hover{
     font-weight: 600;
     font-size: 24px;
     text-align: center;
+    padding: 50px;
 }
 
 #contacto h3{
@@ -408,12 +473,12 @@ li a:hover{
 
 #nombre{
     height: 30px;
-    width: 200px;
+    width: 242.5px;
 }
 
 #email{
     height: 30px;
-    width: 200px;
+    width: 242.5px;
 }
 
 #asunto{
@@ -428,6 +493,8 @@ li a:hover{
 
 #contacto_form{
     margin: 20px;
+    margin-left: 200px;
+
 }
 
 #contacto_info{

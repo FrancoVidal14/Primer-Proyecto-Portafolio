@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curriculum Vidal Franco</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -48,7 +48,8 @@
           ><img src="Iconos/25231.png" alt="Hipervinculo a GitHub"
         /></a>
       </div>
-      <div class="col-5">
+      <div class="col-6" id="texto_inicio">
+        <span>Hola, soy</span>
         <h1>Franco Vidal</h1>
         <h3>Diseñador Web</h3>
         <p>
@@ -59,23 +60,50 @@
         <button id="boton_inicio"><a href="#">Contactame</a></button>
       </div>
       </div>
-      <div class="col-6">
+      <div class="col-5">
         <img
           id="imagen_personal"
           src="/Smiling-Man-PNG-Download-Image.png"
           alt="Foto personal"
-          width="50%"
-          height="50%"
         />
       </div>
-    </section>
+      <div id="destacado" class="row space-around">
+        
+        <div class="caja-destacado">
+        <div class="row">
+        <img src="Iconos/coding.png" alt="">
+        <div class="column">
+        <h3>1 Año de</h3> <span>Experiencia</span>
+        </div>
+        </div>
+        </div>
+      
+        <div class="caja-destacado">
+        <div class="row">
+        <img src="Iconos/pen.png" alt="">
+        <div class="column">
+        <h3>Bocetos</h3> <span>Modernos</span>
+        </div>
+        </div>
+        </div>
+
+        <div class="caja-destacado">
+        <div class="row">
+        <img src="Iconos/time.png" alt="">
+        <div class="column">
+        <h3>Soporte</h3> <span>En linea 24/7</span>
+        </div>
+        </div>
+        </div>
+      </div>
+    </section> 
 
     <section id="info_personal" class="row">
       <div id="contenedor-imagen" class="col-6">
         <div id="fondo-imagen">
         <img
           id="imagen_info"
-          src="/Smiling-Man-PNG-Download-Image.png"
+          src="cliente-masculino-positivo-que-presenta-nuevo-producto_74855-3636.png"
           alt="Foto personal"
           width="300"
           height="300"
@@ -228,8 +256,9 @@
 
     <section id="contacto">
       <h2>Ponerse en contacto</h2>
-      <div class="row col-6">
-        <div id="contacto_form">
+
+      <div class="row">
+        <div id="contacto_form" class="col-6">
           <form>
             <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="caja-form"/>
             <input type="email" id="email" name="email" placeholder="Email" class="caja-form"/>
@@ -248,7 +277,9 @@
           </form>
         </div>
 
+
         <div id="contacto_info" class="col-6">
+          <div >
             <div class="row">
             <div class="circuloscontacto">
               <img
