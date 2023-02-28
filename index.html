@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,6 +14,11 @@
     />
   </head>
   <body>
+     <!-- Pantalla de carga -->
+    <div id="pantalla_carga">
+    <div id="carga"></div>
+    </div>
+
     <header>
       <div id="navbar" class="row col-12">
         <img
@@ -25,7 +30,7 @@
         <nav>
           <ul>
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#info_personal">Informacion Personal</a></li>
+            <li><a href="#info-personal">Informacion Personal</a></li>
             <li><a href="#aptitudes">Aptitudes</a></li>
             <li><a href="#estudios">Estudios</a></li>
             <li><a href="#contacto">Contacto</a></li>
@@ -57,7 +62,7 @@
           atque in consequatur, possimus nulla explicabo doloremque doloribus
           exercitationem voluptatibus quisquam id.
         </p>
-        <button id="boton_inicio"><a href="#">Contactame</a></button>
+        <button id="boton_inicio"><a href="#contacto">Contactame</a></button>
       </div>
       </div>
       <div class="col-5">
@@ -73,7 +78,7 @@
         <div class="row">
         <img src="Iconos/coding.png" alt="">
         <div class="column">
-        <h3>1 Año de</h3> <span>Experiencia</span>
+        <h3>6 meses de</h3> <span>Experiencia</span>
         </div>
         </div>
         </div>
@@ -91,26 +96,24 @@
         <div class="row">
         <img src="Iconos/time.png" alt="">
         <div class="column">
-        <h3>Soporte</h3> <span>En linea 24/7</span>
+        <h3>Soporte</h3> <span>En linea</span>
         </div>
         </div>
         </div>
       </div>
     </section> 
 
-    <section id="info_personal" class="row">
+    <section id="info-personal" class="row space-between">
       <div id="contenedor-imagen" class="col-6">
         <div id="fondo-imagen">
         <img
-          id="imagen_info"
+          id="imagen-info"
           src="cliente-masculino-positivo-que-presenta-nuevo-producto_74855-3636.png"
           alt="Foto personal"
-          width="300"
-          height="300"
         />
       </div>
       </div>
-      <div class="col-3">
+      <div class="col-6" id="info-datos">
         <h2>Sobre mi</h2>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore qui
@@ -119,7 +122,7 @@
           temporibus, provident alias mollitia! Fugit, modi eaque.
         </p>
         <div class="row space-between">
-          <ul id="info_datos">
+          <ul id="lista-datos">
             <li>Nombre</li>
             <li>Telefono</li>
             <li>Email</li>
@@ -135,98 +138,104 @@
             <li>tom.larson@example.com</li>
           </ul>
         </div>
-        <div class="col-3" ></div>
       </div>
     </section>
+
     <section id="aptitudes">
       <h2>Aptitudes</h2>
-      <p>
+      <p id="aptitudesp">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
         consectetur saepe ex vitae, quasi quaerat hic dicta accusantium,
         explicabo suscipit quo veritatis dolorum amet voluptatem quisquam
         consequuntur voluptatum ad iure
       </p>
       <div id="cajas" class="row justify-content-center space-around wrap">
-        <div class="CajaAptitudes">
-          <div class="fondo-caja">
+        <div class="cajaAptitudes">
+          <div class="fondoCaja" id="cajaComunicacion">
             <img
               src="Iconos/comments-solid.png"
               alt="Comunicacion"
               class="icono-caja"
+              id="iconoComunicacion"
             />
           </div>
           <h4>Buena comunicacion</h4>
-          <p>
+          <p class="cajaAptitudesTexto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
             eveniet at similique doloribus fugit
           </p>
         </div>
-        <div class="CajaAptitudes">
-          <div class="fondo-caja">
+        <div class="cajaAptitudes">
+          <div class="fondoCaja" id="cajaTrabajo">
             <img
               src="Iconos/people-group-solid.png"
               alt="Trabajo en equipo"
               class="icono-caja"
+              id="iconoTrabajo"
             />
           </div>
           <h4>Trabajo en equipo</h4>
-          <p>
+          <p class="cajaAptitudesTexto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
             eveniet at similique doloribus fugit
           </p>
         </div>
-        <div class="CajaAptitudes">
-          <div class="fondo-caja">
+        <div class="cajaAptitudes">
+          <div class="fondoCaja" id="cajaResponsabilidad">
             <img
               src="Iconos/list-check-solid.png"
               alt="Responsabilidad"
               class="icono-caja"
+              id="iconoResponsabilidad"
             />
           </div>
           <h4>Responsabilidad</h4>
-          <p>
+          <p class="cajaAptitudesTexto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
             eveniet at similique doloribus fugit
           </p>
         </div>
-        <div class="CajaAptitudes">
-          <div class="fondo-caja">
+        <div class="cajaAptitudes">
+          <div class="fondoCaja" id="cajaProactivo">
             <img
               src="Iconos/rocket-solid.png"
               alt="Proactivo"
               class="icono-caja"
+              id="iconoProactivo"
             />
           </div>
           <h4>Proactivo</h4>
-          <p>
+          <p class="cajaAptitudesTexto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
             eveniet at similique doloribus fugit
           </p>
         </div>
-        <div class="CajaAptitudes">
-          <div class="fondo-caja">
+        <div class="cajaAptitudes">
+          <div class="fondoCaja" id="cajaCI">
             <img
               src="Iconos/laptop-solid.png"
               alt="Conocimientos Informaticos"
               class="icono-caja"
+              id="iconoCI"
             />
           </div>
           <h4>Conociminetos Informaticos</h4>
-          <p>
+          <p class="cajaAptitudesTexto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
             eveniet at similique doloribus fugit
           </p>
         </div>
-        <div class="CajaAptitudes">
-          <div class="fondo-caja">
+        <div class="cajaAptitudes">
+          <div class="fondoCaja" id="cajaLiderazgo">
             <img
               src="Iconos/handshake-solid.png"
               alt="Liderazgo"
               class="icono-caja"
+              id="iconoLiderazgo"
             />
           </div>
           <h4>Liderazgo</h4>
-          <p>
+          <p class="cajaAptitudesTexto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
             eveniet at similique doloribus Fugit
           </p>
@@ -244,9 +253,10 @@
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
         </div>
         <div class="bordederecho col-4 CajaEstudios">
-          <h4>Estudios Secundarios</h4>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        <h4>Estudios Secundarios</h4>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
         </div>
+        
         <div class="col-4 CajaEstudios">
           <h4>Estudios Terciarios</h4>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
@@ -259,11 +269,11 @@
 
       <div class="row">
         <div id="contacto_form" class="col-6">
-          <form>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="caja-form"/>
-            <input type="email" id="email" name="email" placeholder="Email" class="caja-form"/>
+          <form action="mailto:tom.larson@example.com" method="post">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="caja-form" required/>
+            <input type="email" id="email" name="email" placeholder="Email" class="caja-form" required/>
             <br>
-            <input type="text" id="asunto" name="asunto" placeholder="Asunto" class="caja-form"/>
+            <input type="text" id="asunto" name="asunto" placeholder="Asunto" class="caja-form" required/>
             <br>
             <input
               type="text"
@@ -271,6 +281,7 @@
               name="mensaje"
               placeholder="Mensaje"
               class="caja-form"
+              required
               />
             <br>
             <input type="submit" value="Enviar mensaje" id="enviar_mensaje"/>
@@ -324,5 +335,6 @@
         </div>
       </div>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

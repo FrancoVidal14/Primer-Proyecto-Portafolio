@@ -18,6 +18,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth; 
     }
 
 p{
@@ -58,6 +59,42 @@ span{
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 }
+
+/* Pantalla de carga */
+
+#pantalla_carga{
+    background-color: #ececec;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#carga{
+    border: 5px solid #929292;
+    border-top-color: rgb(255, 147, 66);
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar{
+    from { transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
 
 /* Barra de navegacion*/
 
@@ -227,11 +264,34 @@ li a:hover{
 
 /* Seccion Informacion Personal */
 
-#info_personal ul{
+#info-personal ul{
     color: rgb(61, 61, 61);
+    margin-top: 20px;
 }
 
-#info_personal{
+#info-personal h2{
+    margin-bottom: 20px;
+}
+
+#info-personal li{
+    color:rgb(73, 73, 73);
+    font-weight: 200;
+    font-size: 14px;
+}
+
+#lista-datos li{
+    color: black;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+#datos li{
+    color:rgb(73, 73, 73);
+    font-weight: 200;
+    font-size: 14px;
+}
+
+#info-personal{
     background-color:#fff;
     height: 87%;
     align-items: center;
@@ -243,14 +303,21 @@ li a:hover{
     margin: 50px;
 }
 
+#imagen-info{
+    width: 350px;
+    height: 350px;
+}
+
 #fondo-imagen{
     background: rgb(250,251,250);
-    /* background: linear-gradient(180deg, rgba(250,251,250,1) 0%, rgba(231,231,233,1) 99%);  */
     border: 1px solid orange;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
+#info-datos{
+    padding: 100px;
+}
 /* Seccion Aptitudes */
 
 #aptitudes{
@@ -263,7 +330,7 @@ li a:hover{
     height: 80vh;
 }
 
-#aptitudes p{
+#aptitudesp{
     color: black;
     text-align: center;
     margin: 5px;
@@ -279,9 +346,9 @@ li a:hover{
     padding-top: 0px;
 }
 
-
-.CajaAptitudes{
+.cajaAptitudes{
     flex-direction: column;
+    transition: transform .4s;
     background-color: white;
     border-radius: 0px 35px 0px 0px;
     border: 1px;
@@ -290,15 +357,34 @@ li a:hover{
     width: 270px;
     height: 150px;
 }
-.CajaAptitudes:hover{
-    background-color: rgb(251, 147, 76);
+
+.cajaAptitudesNaranja{
+    flex-direction: column;
+    background-color: rgb(255, 147, 66);
+    border-radius: 0px 35px 0px 0px;
+    border: 1px;
+    border-style:solid;
+    border-color: rgb(162, 162, 162);
+    width: 270px;
+    height: 150px;
+    transform: scale(1.2)
 }
 
-.fondo-caja{
+.fondoCaja{
     border-radius:4px;
     height: 50px;
     width: 50px;
     background-color: rgb(255, 147, 66);
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+}
+
+.fondoCajaBlanco{
+    border-radius:4px;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
     position: relative;
     bottom: 20px;
     left: 20px;
@@ -313,7 +399,7 @@ li a:hover{
     left: 20%;
 }
 
-.CajaAptitudes h4{
+.cajaAptitudes h4{
     color: rgb(11, 9, 92);
     font-weight: 600;
     font-size: 13px;
@@ -322,7 +408,8 @@ li a:hover{
     margin-bottom: 10px;
 }
 
-.CajaAptitudes p{
+.cajaAptitudesTexto{
+    color: rgb(59, 59, 59);
     font-size: 12px;
 	text-align:left;
 	align-self:left;  
@@ -331,16 +418,27 @@ li a:hover{
     position: static;  
 } 
 
+.cajaAptitudesTexto2{
+    color: #fff;
+    font-size: 12px;
+	text-align:left;
+	align-self:left;  
+	margin-left: 15px;
+    margin-right: 15px;
+    position: static;  
+} 
 /* Seccion Estudios */
 
 #estudios{
     background: rgb(255,132,0);
     background: linear-gradient(69deg, rgba(255,132,0,1) 0%, rgba(253,187,45,1) 72%); 
+    height: 70vh;
 }
+
 #estudios h2{
     color: aliceblue;
     text-align: center;
-    margin: 45px;
+    padding: 20px;
 }
 
 #estudios h4{
@@ -372,7 +470,7 @@ li a:hover{
     transform: scale(1.5);}
 
 #contacto{
-    height: 70vh;
+    height: 90vh;
     background: rgb(240,240,240);
     background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(254,254,254,1) 51%, rgba(254,254,254,1) 51%, rgba(240,240,240,1) 100%); 
 }
